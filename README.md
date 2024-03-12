@@ -11,6 +11,10 @@
 
 ## Main Functionalities
 Importing customer from CSV, JSON etc. files.
+Customer Import is a supportive marketing tool which allows store owners can import the customer using csv and json file via commend line.
+
+sudo php bin/magento customer:import sample-csv sample.csv
+sudo php bin/magento customer:import sample-json sample.json
 
 ## Installation
 \* = in production please use the `--keep-generated` option
@@ -29,7 +33,7 @@ Importing customer from CSV, JSON etc. files.
     - public repository `packagist.org`
     - public github repository as vcs
  - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require pramodguptabt07/module-customerimport`
+ - Install the module composer by running `composer require pramodguptabt07/module-customerimport:dev-main`
  - enable the module by running `php bin/magento module:enable Pramod_CustomerImport`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
