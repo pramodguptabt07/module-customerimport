@@ -17,38 +17,31 @@ sudo php bin/magento customer:import sample-csv sample.csv
 sudo php bin/magento customer:import sample-json sample.json
 
 ## Installation
-\* = in production please use the `--keep-generated` option
+How to install Customer Import in Magento 2
 
 ### Type 1: Zip file
 
- - Unzip the zip file in `app/code/Pramod`
+ - Unzip the zip file in `app/code/Pramod/CustomerImport`
  - Enable the module by running `php bin/magento module:enable Pramod_CustomerImport`
  - Apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
 
 ### Type 2: Composer
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
  - Install the module composer by running `composer require pramodguptabt07/module-customerimport:dev-main`
  - enable the module by running `php bin/magento module:enable Pramod_CustomerImport`
  - apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
 
-
 ## Configuration
-
-
-
-
+  
 ## Specifications
 
  - Console Command
-	- Import
-
+	- Import Csv File
+      sudo php bin/magento customer:import sample-csv sample.csv
+   - Import Json File
+      sudo php bin/magento customer:import sample-json sample.json
 
 ## Attributes
 
