@@ -68,15 +68,14 @@ class Import
                 return 0;
             }
 
-            $data = $this->csv->getData($fileName);
-            $i = 0;
-            foreach ($data as $key => $value) {
-                if ($i == 0) {
-                    $i++;
-                    continue;
-                }
-                $this->customerModel->updateCsvCustomer($value);
-            }
+            $csvData = $this->csv->getData($fileName);
+            if (count($csvData) > 0) {
+				foreach($csvData as $row =>$data) {
+					if ($row > 0) { 
+						$this->customerModel->updateCsvCustomer($data);
+					}
+				}
+			}
             return true;
         } catch (LocalizedException $e) {
             $output->writeln("<error>" . $e->getMessage() . "</error>");
