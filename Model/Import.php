@@ -5,7 +5,7 @@
  *
  * @category Pramod
  * @package  Pramod_CustomerImport
- * @author   Pramod Gupta <pramod@gmail.com>
+ * @author   Pramod Gupta <pramodguptabt07@gmail.com>
  */
 
 namespace Pramod\CustomerImport\Model;

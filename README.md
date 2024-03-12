@@ -28,10 +28,10 @@ How to install Customer Import in Magento 2
 
 ### Type 2: Composer
 
- - Install the module composer by running `composer require pramodguptabt07/module-customerimport:dev-main`
- - enable the module by running `php bin/magento module:enable Pramod_CustomerImport`
- - apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+ - Install the module composer by running `sudo composer require pramodguptabt07/module-customerimport:dev-main`
+ - enable the module by running `sudo php bin/magento module:enable Pramod_CustomerImport`
+ - apply database updates by running `sudo php bin/magento setup:upgrade`\*
+ - Flush the cache by running `sudo php bin/magento cache:flush`
 
 ## Configuration
   
