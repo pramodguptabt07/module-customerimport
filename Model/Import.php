@@ -70,12 +70,12 @@ class Import
 
             $csvData = $this->csv->getData($fileName);
             if (count($csvData) > 0) {
-				foreach($csvData as $row =>$data) {
-					if ($row > 0) { 
-						$this->customerModel->updateCsvCustomer($data);
-					}
-				}
-			}
+                foreach ($csvData as $row => $data) {
+                    if ($row > 0) {
+                        $this->customerModel->updateCsvCustomer($data);
+                    }
+                }
+            }
             return true;
         } catch (LocalizedException $e) {
             $output->writeln("<error>" . $e->getMessage() . "</error>");
